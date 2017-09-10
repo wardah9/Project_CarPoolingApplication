@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693936272937",
+    "firebase_url": "https://carpoolingapplication-853ee.firebaseio.com",
+    "project_id": "carpoolingapplication-853ee",
+    "storage_bucket": "carpoolingapplication-853ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693936272937:android:b5dcc5b7827093da",
+        "android_client_info": {
+          "package_name": "carpoolingapplication.carpooling.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693936272937-u4hur614674giv2ooq7ikfbva2ccv5ur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "carpoolingapplication.carpooling.com",
+            "certificate_hash": "8d47366e0b0153016d7bd7e165e3b6d521c5923c"
+          }
+        },
+        {
+          "client_id": "693936272937-j8nsftt6e5qdh8rs7bs4svtnr78pguts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKLBzPW3xajZLZGEgBb2kuxKxC0aLKGCM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693936272937-j8nsftt6e5qdh8rs7bs4svtnr78pguts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
