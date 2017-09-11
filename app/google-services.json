@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "693936272937-fap86e4g3g0nehvpr1fl0aq218sq86vo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "carpoolingapplication.carpooling.com",
+            "certificate_hash": "3fd33f2e5a50f648497f81b38426364aa66b68d2"
+          }
+        },
+        {
           "client_id": "693936272937-u4hur614674giv2ooq7ikfbva2ccv5ur.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -30,6 +38,9 @@
       "api_key": [
         {
           "current_key": "AIzaSyDKLBzPW3xajZLZGEgBb2kuxKxC0aLKGCM"
+        },
+        {
+          "current_key": "AIzaSyCnGgTyKiArx0UGZIrOBgJHd2osOgthFJM"
         }
       ],
       "services": {
