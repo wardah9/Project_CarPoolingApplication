@@ -9,20 +9,28 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import carpoolingapplication.carpooling.com.fragment.AboutFragment;
+import carpoolingapplication.carpooling.com.fragment.AboutAppFragment;
 import carpoolingapplication.carpooling.com.fragment.ContentFragment;
-import io.codetail.animation.ViewAnimationUtils;
+import carpoolingapplication.carpooling.com.fragment.HistoryFragment;
+import carpoolingapplication.carpooling.com.fragment.ServicesFragment;
+import carpoolingapplication.carpooling.com.fragment.SettingFragment;
+import carpoolingapplication.carpooling.com.fragment.SharingFragment;
+import carpoolingapplication.carpooling.com.fragment.UserAccountFragment;
+//import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
-import yalantis.com.sidemenu.util.ViewAnimator;
+//import yalantis.com.sidemenu.util.ViewAnimator;
 
 public class HomeActivity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
 
@@ -30,7 +38,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
     private ViewAnimator viewAnimator;
-    private int res = R.drawable.content_music;
+    private int res = R.drawable.home_project;
     private LinearLayout linearLayout;
 
     @Override
@@ -38,7 +46,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ContentFragment contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        ContentFragment contentFragment = ContentFragment.newInstance(R.drawable.home_project);   //content_music
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, contentFragment)
                 .commit();
@@ -65,20 +73,20 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         SlideMenuItem menuItem = new SlideMenuItem(ContentFragment.SERVICES, R.drawable.icn_1);
         list.add(menuItem);
 
-        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.SHARE_MY_CAR,R.drawable.care_sharing);
-        list.add(menuItem2);
-
-        SlideMenuItem menuItem3 = new SlideMenuItem(ContentFragment.FIND_A_CAR, R.drawable.ic_search);
-        list.add(menuItem3);
+//        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.SHARE_MY_CAR,R.drawable.care_sharing);
+//        list.add(menuItem2);
+//
+//        SlideMenuItem menuItem3 = new SlideMenuItem(ContentFragment.FIND_A_CAR, R.drawable.ic_search);
+//        list.add(menuItem3);
 
         SlideMenuItem menuItem4 = new SlideMenuItem(ContentFragment.HISTORY, R.drawable.history_icon);
         list.add(menuItem4);
 
-        SlideMenuItem menuItem5 = new SlideMenuItem(ContentFragment.MY_ACCOUNT, R.drawable.icn_4);
+        SlideMenuItem menuItem5 = new SlideMenuItem(ContentFragment.MY_ACCOUNT, R.drawable.user_identity);
         list.add(menuItem5);
 
-        SlideMenuItem menuItem6 = new SlideMenuItem(ContentFragment.COMMUNICATE,R.drawable.ic_communication);
-        list.add(menuItem6);
+//        SlideMenuItem menuItem6 = new SlideMenuItem(ContentFragment.COMMUNICATE, R.drawable.ic_communication);
+//        list.add(menuItem6);
 
         SlideMenuItem menuItem7 = new SlideMenuItem(ContentFragment.SETTINGS, R.drawable.ic_menu_manage);
         list.add(menuItem7);
@@ -86,8 +94,11 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         SlideMenuItem menuItem8 = new SlideMenuItem(ContentFragment.SHARING, R.drawable.ic_menu_share);
         list.add(menuItem8);
 
+        SlideMenuItem menuItem9 = new SlideMenuItem(ContentFragment.ABOUT, R.drawable.information_icon);
+        list.add(menuItem9);
 
     }
+
 
     private void setActionBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -137,9 +148,28 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
 
-    private ScreenShotable replaceFragment(ScreenShotable screenShotable, int topPosition) {
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {    //for menu action_settings selecting
+//        if (drawerToggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+//        switch (item.getItemId()) {
+//            case R.id.action_settings:
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 
-       // this.res = this.res == R.drawable.content_music ? R.drawable.content_films : R.drawable.content_music;
+
+    private ScreenShotable replaceFragment(ScreenShotable screenShotable, int topPosition) {
+        //this.res = this.res == R.drawable.content_music ? R.drawable.ic_launcher : R.drawable.content_music;
         View view = findViewById(R.id.content_frame);
         int finalRadius = Math.max(view.getWidth(), view.getHeight());
         Animator animator = ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
@@ -151,24 +181,69 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         ContentFragment contentFragment = ContentFragment.newInstance(this.res);
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         return contentFragment;
+
     }
 
     @Override
     public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position) {
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-                return screenShotable;
+               // finishActivity(1);
+                 finish();
+             //  return screenShotable;
             case ContentFragment.SERVICES:
-                AboutFragment about_Frag = new AboutFragment().newInstance(this.res);
-                //  getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, About_Frag).addToBackStack("").commit();
-                getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, about_Frag).commit();
-                return replaceFragment(about_Frag, position);
+                ServicesFragment Services_Frag = new ServicesFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, Services_Frag)
+                        .addToBackStack("ServicesFragment")
+                        .commit();
+                return screenShotable;
+            case ContentFragment.HISTORY:
+                HistoryFragment History_Frag = new HistoryFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, History_Frag)
+                        .addToBackStack("HistoryFragment")
+                        .commit();
+                return screenShotable;
+            case ContentFragment.MY_ACCOUNT:
+                UserAccountFragment Account_Frag = new UserAccountFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, Account_Frag)
+                        .addToBackStack("AccountFragment")
+                        .commit();
+                return screenShotable;
+//            case ContentFragment.COMMUNICATE:
+//                ComunicationFragment Comunication_Frag = new ComunicationFragment();
+//                getSupportFragmentManager().beginTransaction()
+//                        .replace(R.id.content_frame, Comunication_Frag)
+//                        .addToBackStack("ComunicationFragment")
+//                        .commit();
+//                return screenShotable;
+            case ContentFragment.SETTINGS:
+                SettingFragment Setting_Frag = new SettingFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, Setting_Frag)
+                        .addToBackStack("SettingFragment")
+                        .commit();
+                return screenShotable;
+            case ContentFragment.SHARING:
+                SharingFragment Sharing_Frag = new SharingFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, Sharing_Frag)
+                        .addToBackStack("SharingFragment")
+                        .commit();
+                return screenShotable;
+            case ContentFragment.ABOUT:
+                AboutAppFragment About_Frag = new AboutAppFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, About_Frag)
+                        .addToBackStack("AboutFragment")
+                        .commit();
+                return screenShotable;
             default:
                 return replaceFragment(screenShotable, position);
-
         }
     }
-
 
     @Override
     public void disableHomeButton() {

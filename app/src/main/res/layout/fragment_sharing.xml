@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<FrameLayout
+    android:id="@+id/sharing_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_project">
+
+    <!--<TextView-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:text="sharing_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+    <LinearLayout
+        android:layout_marginTop="300dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:layout_centerInParent="true"
+        android:text="Google"
+        android:textAllCaps="false"
+        android:id="@+id/googleID"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#b6353b"
+        android:drawableLeft="@drawable/googleicon"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingRight="10dp"
+        android:drawablePadding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textAllCaps="false"
+        android:text="Facebook"
+        android:id="@+id/facebookID"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#1C33FF"
+        android:drawableLeft="@drawable/facebook"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingRight="10dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+</FrameLayout>
+</io.codetail.widget.RevealFrameLayout>

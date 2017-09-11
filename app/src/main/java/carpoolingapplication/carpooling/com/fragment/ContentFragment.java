@@ -1,6 +1,7 @@
 package carpoolingapplication.carpooling.com.fragment;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Bundle;
@@ -9,9 +10,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import carpoolingapplication.carpooling.com.R;
+import carpoolingapplication.carpooling.com.map.MapsActivity;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 
 /**
@@ -20,25 +23,28 @@ import yalantis.com.sidemenu.interfaces.ScreenShotable;
 public class ContentFragment extends Fragment implements ScreenShotable {
     public static final String CLOSE = "Close";
     public static final String SERVICES = "Services";
-    public static final String BUILDING = "Building";
-    public static final String BOOK = "Book";
-    public static final String PAINT = "Paint";
-    public static final String CASE = "Case";
-    public static final String SHOP = "Shop";
-    public static final String PARTY = "Party";
-    public static final String MOVIE = "Movie";
-    public static final String SHARE_MY_CAR = "Share my Car";
-    public static final String FIND_A_CAR = "Find a Ride";
+//    public static final String BUILDING = "Building";
+//    public static final String BOOK = "Book";
+//    public static final String PAINT = "Paint";
+//    public static final String CASE = "Case";
+//    public static final String SHOP = "Shop";
+//    public static final String PARTY = "Party";
+//    public static final String MOVIE = "Movie";
+//    public static final String SHARE_MY_CAR = "Share my Car";
+//    public static final String FIND_A_CAR = "Find a Ride";
     public static final String HISTORY = "History";
     public static final String MY_ACCOUNT = "My Account";
-    public static final String COMMUNICATE = "Communicate";
+//    public static final String COMMUNICATE = "Communicate";
     public static final String SETTINGS = "Settings";
     public static final String SHARING = "Sharing";
+    public static final String ABOUT = "About";
 
     private View containerView;
-    protected ImageView mImageView;
+//    protected ImageView mImageView;
     protected int res;
     private Bitmap bitmap;
+    private Button shareCar;
+    private Button findCar;
 
     public static ContentFragment newInstance(int resId) {
         ContentFragment contentFragment = new ContentFragment();
@@ -65,10 +71,35 @@ public class ContentFragment extends Fragment implements ScreenShotable {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        mImageView = (ImageView) rootView.findViewById(R.id.image_content);
-        mImageView.setClickable(true);
-        mImageView.setFocusable(true);
-        mImageView.setImageResource(res);
+        shareCar = (Button) rootView.findViewById(R.id.share_my_Car);
+        findCar = (Button) rootView.findViewById(R.id.find_Car);
+
+
+        shareCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getActivity(), MapsActivity.class));
+            }
+        });
+
+
+
+        findCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                RideOfferFragment Ride_Frag = new RideOfferFragment();
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.content_frame, Ride_Frag)
+                        .addToBackStack("RideFragment")
+                        .commit();
+            }
+        });
+//        mImageView = (ImageView) rootView.findViewById(R.id.image_content);
+//        mImageView.setClickable(true);
+//        mImageView.setFocusable(true);
+//        mImageView.setImageResource(res);
         return rootView;
     }
 
@@ -77,8 +108,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                Bitmap bitmap = Bitmap.createBitmap(containerView.getWidth(),
-                        containerView.getHeight(), Bitmap.Config.ARGB_8888);
+                Bitmap bitmap = Bitmap.createBitmap(containerView.getWidth(), containerView.getHeight(), Bitmap.Config.ARGB_8888);
                 Canvas canvas = new Canvas(bitmap);
                 containerView.draw(canvas);
                 ContentFragment.this.bitmap = bitmap;
