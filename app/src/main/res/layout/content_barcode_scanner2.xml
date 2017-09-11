@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="carpoolingapplication.carpooling.com.BarcodeScanner"
+    tools:showIn="@layout/activity_barcode_scanner2">
+
+    <Button
+        android:id="@+id/btn_scanbarcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="132dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="215dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/txtview_barcoder_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/btn_scanbarcode"
+        android:layout_marginStart="10dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_scanbarcode" />
+</android.support.constraint.ConstraintLayout>
