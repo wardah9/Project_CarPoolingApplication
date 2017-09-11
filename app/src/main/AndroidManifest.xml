@@ -43,7 +43,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ChooseOptionsActivity" />
-        <activity android:name=".ForgetPassActivity"></activity>
+        <activity android:name=".ForgetPassActivity"/>
     </application>
 
 </manifest>
