@@ -9,7 +9,6 @@
     <ListView
         android:layout_gravity="center"
         android:id="@+id/list_card"
-        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

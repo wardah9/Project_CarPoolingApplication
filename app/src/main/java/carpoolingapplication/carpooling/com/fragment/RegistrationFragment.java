@@ -2,6 +2,7 @@ package carpoolingapplication.carpooling.com.fragment;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +32,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import carpoolingapplication.carpooling.com.BarcodeScanner;
 import carpoolingapplication.carpooling.com.R;
 
 
@@ -109,7 +112,7 @@ public class RegistrationFragment extends Fragment {
         }
     }
 
-    public static class Reg1 extends FragmentActivity{
+    public static class Reg1 extends FragmentActivity {
 
         private EditText userName;
         private EditText userEmail;
@@ -153,22 +156,22 @@ public class RegistrationFragment extends Fragment {
             userGender.setAdapter(adapter);
 
             if (userName.getText().length() > 5 &&
-                    userName.getText().length() != 0){
+                    userName.getText().length() != 0) {
 
             }
 
-            if (Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()){
+            if (Patterns.EMAIL_ADDRESS.matcher(userEmail.getText().toString()).matches()) {
 
             }
 
 
             if (userPhone.getText().length() > 5 &&
-                    userPhone.getText().length() != 0){
+                    userPhone.getText().length() != 0) {
 
             }
 
 
-            if (userNationality.getText().length() != 0){
+            if (userNationality.getText().length() != 0) {
 
             }
 
@@ -183,9 +186,9 @@ public class RegistrationFragment extends Fragment {
                                     Log.d("firebaseLogin", "createUserWithEmail:onComplete:" + task.isSuccessful());
 
                                     if (task.isSuccessful()) {
-//                                        Toast.makeText(FirebaseUSerRegisterActivity.this, "register successful", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "register successful", Toast.LENGTH_SHORT).show();
                                     } else
-                                        Toast.makeText(Reg1.this, "register failed ", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "register failed ", Toast.LENGTH_SHORT).show();
 //                                    getUID();
                                 }
                             });
@@ -193,7 +196,7 @@ public class RegistrationFragment extends Fragment {
             });
 
 
-                return v;
+            return v;
         }
     }
 
@@ -206,9 +209,22 @@ public class RegistrationFragment extends Fragment {
     }
 
     public static class Reg3 extends FragmentActivity {
+
+        TextView view_barcode;
+
         @Override
         public View onCreateView(String name, Context context, AttributeSet attrs) {
             View v = LayoutInflater.from(getApplicationContext()).inflate(R.layout.fragment_barcode, null, false);
+
+            view_barcode = (TextView) v.findViewById(R.id.view_barcode);
+
+            view_barcode.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    startActivity(new Intent(getApplicationContext(), BarcodeScanner.class));
+                }
+            });
             return v;
         }
     }
