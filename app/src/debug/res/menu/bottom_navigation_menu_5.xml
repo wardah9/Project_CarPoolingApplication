@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="H_1"
+        android:icon="@drawable/ic_apps_black_24dp" />
+
+    <item
+        android:title="H_2"
+        android:icon="@drawable/ic_maps_local_bar" />
+
+    <item
+        android:title="H_3"
+        android:icon="@drawable/ic_maps_local_restaurant" />
+
+    <item
+        android:title="H_4"
+        android:icon="@drawable/ic_maps_local_bar" />
+
+    <item
+        android:title="H_5"
+        android:icon="@drawable/ic_maps_place" />
+</menu>
