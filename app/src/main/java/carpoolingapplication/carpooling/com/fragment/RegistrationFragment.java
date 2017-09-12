@@ -155,8 +155,7 @@ public class RegistrationFragment extends Fragment {
             ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items);
             userGender.setAdapter(adapter);
 
-            if (userName.getText().length() > 5 &&
-                    userName.getText().length() != 0) {
+            if (userName.getText().length() > 5 && userName.getText().length() != 0) {
 
             }
 
@@ -165,8 +164,7 @@ public class RegistrationFragment extends Fragment {
             }
 
 
-            if (userPhone.getText().length() > 5 &&
-                    userPhone.getText().length() != 0) {
+            if (userPhone.getText().length() > 5 && userPhone.getText().length() != 0) {
 
             }
 

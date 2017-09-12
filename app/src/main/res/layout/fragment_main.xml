@@ -25,14 +25,16 @@
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:theme="@style/Button"/>
         <Button
             android:layout_marginTop="80dp"
             android:text="find a Car"
             android:id="@+id/find_Car"
             android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:theme="@style/Button"/>
 
         <!--<ImageView-->
             <!--android:scaleType="fitXY"-->

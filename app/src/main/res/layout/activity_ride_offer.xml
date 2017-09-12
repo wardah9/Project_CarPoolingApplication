@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#b3fff1">
+    android:background="@drawable/back3"
+    android:gravity="center">
 <TableLayout
     android:layout_width="wrap_content"
-    android:layout_height="fill_parent"
-    android:layout_gravity="center"
-    android:gravity="center">
+    android:layout_height="wrap_content"
+    android:padding="50dp"
+    android:background="@drawable/my_border">
 
     <TableRow
         android:layout_width="wrap_content"
@@ -21,6 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Source: "
+            android:textSize="20dp"
+            android:textColor="#000"
             android:textStyle="bold" />
 
         <EditText
@@ -38,9 +41,11 @@
 
         <TextView
             android:id="@+id/d1Text"
+            android:textSize="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Destination: "
+            android:textColor="#000"
             android:textStyle="bold" />
 
         <EditText
@@ -61,6 +66,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tText"
+            android:textColor="#000"
+            android:textSize="20dp"
             android:inputType="time"
             android:text="Time: "
             android:textStyle="bold" />
@@ -82,6 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
+            android:textSize="20dp"
+            android:textColor="#000"
             android:text="Date: "
             android:textStyle="bold" />
 
@@ -97,6 +106,8 @@
     <Button
         android:id="@+id/search"
         android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
