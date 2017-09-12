@@ -13,9 +13,6 @@ import carpoolingapplication.carpooling.com.R;
 import carpoolingapplication.carpooling.com.map.MapsActivity;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ServicesFragment extends Fragment {
 
 
