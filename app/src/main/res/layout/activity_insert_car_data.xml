@@ -8,25 +8,5 @@
     android:gravity="center"
     tools:context="carpoolingapplication.carpooling.com.InsertCarData">
 
-    <RelativeLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:padding="1dp">
-
-        <carpoolingapplication.carpooling.com.classes.RoundedImageView
-            android:id="@+id/img_profile"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY" />
-        <TextView
-            android:id="@+id/choose_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:background="@mipmap/ic_launcher" />
-    </RelativeLayout>
-
 
 </LinearLayout>
