@@ -21,6 +21,7 @@ android:layout_height="match_parent">
     <Button
         android:text="Share my Car"
         android:id="@+id/share_my_Car"
+        android:theme="@style/Button"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:layout_width="match_parent"
