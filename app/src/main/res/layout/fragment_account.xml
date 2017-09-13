@@ -5,6 +5,7 @@
     android:background="@drawable/back3"
     android:gravity="center"
     android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -15,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY" />
+
         <TextView
             android:id="@+id/choose_view"
             android:layout_width="wrap_content"
@@ -24,17 +26,19 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/pencil" />
     </RelativeLayout>
-
-
     <!--<ImageView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="200dp"-->
-        <!--android:layout_marginTop="60dp"-->
-        <!--android:src="@drawable/user_identity" />-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:layout_marginTop="60dp"-->
+    <!--android:src="@drawable/user_identity" />-->
     <!--android:adjustViewBounds="true"-->
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/my_border"
         android:clickable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -58,9 +62,24 @@
             android:layout_toEndOf="@id/ivContactItem1"
             android:layout_toRightOf="@id/ivContactItem1"
             android:text="(987) 999-7890"
-            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#212121" />
+            android:textColor="#212121"
+            android:textStyle="bold" />
+
+        <!--<EditText-->
+            <!--android:id="@+id/edit_Number1"-->
+            <!--android:layout_toEndOf="@id/tvNumber1"-->
+            <!--android:layout_toRightOf="@id/tvNumber1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvNumber1_visable"-->
+            <!--android:layout_toEndOf="@id/edit_Number1"-->
+            <!--android:layout_toRightOf="@id/edit_Number1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:visibility="gone" />-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -74,7 +93,6 @@
             android:text="Mobile"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="#000" />
-
 
     </RelativeLayout>
 
@@ -90,6 +108,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:background="@drawable/my_border"
         android:clickable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -105,7 +124,7 @@
 
         <!--android:src="@drawable/ic_email_black_24dp"-->
         <TextView
-            android:id="@+id/tvNumber3"
+            android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -115,14 +134,28 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="Noor@gmail.com"
-            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="#212121" />
+            android:textColor="#212121"
+            android:textStyle="bold" />
+        <!--<EditText-->
+            <!--android:id="@+id/edit_tvEmail"-->
+            <!--android:layout_toEndOf="@id/tvEmail"-->
+            <!--android:layout_toRightOf="@id/tvEmail"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvEmail_visable"-->
+            <!--android:layout_toEndOf="@id/edit_tvEmail"-->
+            <!--android:layout_toRightOf="@id/edit_tvEmail"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:visibility="gone" />-->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvNumber3"
+            android:layout_below="@id/tvEmail"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="8dp"
@@ -153,9 +186,13 @@
             android:id="@+id/update_bt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update" />
+            android:background="@drawable/my_border"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="#ea091073" />
 
     </LinearLayout>
+
 </LinearLayout>
 
 

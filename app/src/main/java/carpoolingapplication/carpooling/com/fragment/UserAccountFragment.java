@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +43,12 @@ public class UserAccountFragment extends Fragment {
     TextView textView_dialog;
     private int SELECT_FROM_GALLARY = 2;
     private int SELECT_FROM_CAMERA = 1;
+    private TextView phoneNumber;
+    private EditText editphoneNumber;
+    private TextView phoneNumbervisiable;
+    private TextView EmailTv;
+    private EditText editEmail;
+    private TextView EmailTvvisiable;
 
     public UserAccountFragment() {
         // Required empty public constructor
@@ -52,6 +59,8 @@ public class UserAccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_account, container, false);
+
+
         update_bt = (Button) rootView.findViewById(R.id.update_bt);
         img_profile = (ImageView) rootView.findViewById(R.id.img_profile);
 
@@ -59,9 +68,20 @@ public class UserAccountFragment extends Fragment {
 
         img_profile.setImageResource(R.drawable.user_identity);
 
+//        phoneNumber = (TextView) rootView.findViewById(R.id.tvNumber1);
+//        editphoneNumber = (EditText) rootView.findViewById(R.id.edit_Number1);
+//        phoneNumbervisiable = (TextView) rootView.findViewById(R.id.tvNumber1_visable);
+//        EmailTv = (TextView) rootView.findViewById(R.id.tvEmail);
+//        editEmail = (EditText) rootView.findViewById(R.id.edit_tvEmail);
+//        EmailTvvisiable = (TextView) rootView.findViewById(R.id.tvEmail_visable);
         update_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                phoneNumbervisiable.setVisibility(View.GONE);
+//                EmailTvvisiable.setVisibility(View.GONE);
+//
+//                editphoneNumber.setVisibility(View.VISIBLE);
+//                editEmail.setVisibility(View.VISIBLE);
 
             }
         });

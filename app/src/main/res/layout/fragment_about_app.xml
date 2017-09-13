@@ -7,20 +7,78 @@
     android:background="@drawable/back2"
     android:gravity="center">
 
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Description"/>
+        android:text="Description:"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:textColor="#1c929f"
+        android:textSize="20sp"/>
 
-    <Button
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Team "/>
+        android:layout_margin="10dp"
+        android:background="@drawable/my_border"
+        android:padding="10dp"
+        android:textColor="#0325e9"
+        android:text="Carpooling (also car-sharing, ride-sharing and lift-sharing) is the sharing of car journeys so that more than one person travels in cars.
+        By having more people using one vehicle, carpooling reduces each person's travel costs such as fuel costs, tolls, and the stress of driving. Carpooling is also a more environmentally friendly and sustainable way to travel as sharing journeys reduces air pollution, carbon emissions, traffic congestion on the roads, and the need for parking spaces." />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Team Member:"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#1c929f"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="#0325e9"
+        android:background="@drawable/my_border"
+        android:padding="10dp"
+        android:text="Nura Said Al-Saifi \n IT Technician \n noormoon88@gmail.com"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0325e9"
+        android:gravity="center"
+        android:background="@drawable/my_border"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Wardah Saleem Al-Shukiliya \n Student \n wardah9658@gmail.com"/>
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Description"/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Team Member"/>-->
+
+    <!--<ListView-->
+        <!--android:background="@drawable/my_border"-->
+        <!--android:id="@+id/about_list"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:padding="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
         <!--<TextView-->
             <!--android:layout_gravity="center"-->
             <!--android:layout_margin="20dp"-->
             <!--android:text="Carpooling (also car-sharing, ride-sharing and lift-sharing) is the sharing of car journeys so that more than one person travels in cars.-->
-                 <!--By having more people using one vehicle, carpooling reduces each person's travel costs such as fuel costs, tolls, and the stress of driving. Carpooling is also a more environmentally friendly and sustainable way to travel as sharing journeys reduces air pollution, carbon emissions, traffic congestion on the roads, and the need for parking spaces. Authorities often encourage carpooling, especially during periods of high pollution or high fuel prices. In 2009, carpooling represented 43.5% of all trips in the United States and 10% of commute trips. The majority of carpool commutes (over 60%) are fam-pools with family members."-->
+            <!--By having more people using one vehicle, carpooling reduces each person's travel costs such as fuel costs, tolls, and the stress of driving. Carpooling is also a more environmentally friendly and sustainable way to travel as sharing journeys reduces air pollution, carbon emissions, traffic congestion on the roads, and the need for parking spaces. Authorities often encourage carpooling, especially during periods of high pollution or high fuel prices. In 2009, carpooling represented 43.5% of all trips in the United States and 10% of commute trips. The majority of carpool commutes (over 60%) are fam-pools with family members."-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content" />-->
 

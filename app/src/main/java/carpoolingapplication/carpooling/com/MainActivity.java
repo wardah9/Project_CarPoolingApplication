@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(50000);
+                    Thread.sleep(5000);
                     finish();
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 } catch (InterruptedException e) {

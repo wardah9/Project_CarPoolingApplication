@@ -6,7 +6,7 @@
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="300dp"
-    android:layout_marginBottom="20dp"
+    android:layout_marginBottom="50dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
     android:background="#b3fff1"
@@ -34,6 +34,7 @@
                 android:id="@+id/tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
                 android:layout_alignParentBottom="true"
                 android:background="#18680000"
                 android:textColor="#000000" />
@@ -44,11 +45,22 @@
             android:textColor="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp" />
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="0.5"
+            android:layout_alignParentTop="true"
+            android:theme="@style/RatingBar" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
             <!--android:layout_marginTop="10dp"-->
 
             <Button
@@ -56,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shared"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/delete_btn"
@@ -73,19 +85,21 @@
                 android:layout_toRightOf="@id/delete_btn"
                 android:text="Comment"
                 android:textAllCaps="false" />
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_alignParentBottom="true"-->
 
 
     </RelativeLayout>
-        <RatingBar
-            android:id="@+id/rating"
-            android:layout_alignParentBottom="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            android:rating="3"
-            android:stepSize="0.5"
-            android:layout_marginTop="10dp"
-            android:theme="@style/RatingBar" />
+        <!--<RatingBar-->
+            <!--android:id="@+id/rating"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:numStars="5"-->
+            <!--android:rating="3"-->
+            <!--android:stepSize="0.5"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:theme="@style/RatingBar" />-->
 
     </LinearLayout>
 

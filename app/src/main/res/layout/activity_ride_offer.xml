@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Source: "
             android:textSize="20dp"
-            android:textColor="#000"
+            android:textColor="#ea091073"
             android:textStyle="bold" />
 
         <EditText
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Destination: "
-            android:textColor="#000"
+            android:textColor="#ea091073"
             android:textStyle="bold" />
 
         <EditText
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tText"
-            android:textColor="#000"
+            android:textColor="#ea091073"
             android:textSize="20dp"
             android:inputType="time"
             android:text="Time: "
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:inputType="date"
             android:textSize="20dp"
-            android:textColor="#000"
+            android:textColor="#ea091073"
             android:text="Date: "
             android:textStyle="bold" />
 
@@ -106,8 +106,9 @@
     <Button
         android:id="@+id/search"
         android:textAllCaps="false"
-        android:textColor="#000"
+        android:textColor="#ea091073"
         android:textSize="20dp"
+        android:background="@drawable/my_border"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -21,6 +21,12 @@
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#18a7a9</item>
     </style>
+
+    <style name="MyButton2" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@android:color/holo_blue_bright</item>
+        <item name="colorButtonNormal">@android:color/holo_blue_dark</item>
+    </style>
+
     <style name="RatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">@android:color/holo_orange_dark</item>
         <item name="colorControlActivated">@android:color/holo_green_light</item>

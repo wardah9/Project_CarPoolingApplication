@@ -14,18 +14,22 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="Language"
-            android:textStyle="bold"
+        android:textColor="#1c929f"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
         <ListView
+            android:background="@drawable/my_border"
             android:id="@+id/language_list"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
 
 
     </FrameLayout>
