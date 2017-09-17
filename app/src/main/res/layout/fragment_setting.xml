@@ -1,36 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<io.codetail.widget.RevealFrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/home_project"
+    android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/setting_container"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/home_project">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="240dp"
+        android:orientation="horizontal">
 
         <TextView
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Language"
-        android:textColor="#1c929f"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergence SAS"
+            android:textColor="#1c929f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-        <ListView
-            android:background="@drawable/my_border"
-            android:id="@+id/language_list"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:padding="20dp"
-            android:layout_width="match_parent"
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@android:drawable/ic_menu_info_details"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Notification"
+            android:textColor="#1c929f"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
 
-    </FrameLayout>
-</io.codetail.widget.RevealFrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@android:drawable/stat_notify_sync_noanim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Synchronize"
+            android:textColor="#1c929f"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Language"
+            android:textColor="#1c929f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/language_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/my_border"
+            android:padding="20dp" />
+        <!--android:layout_marginTop="100dp"-->
+    </LinearLayout>
+
+</LinearLayout>
