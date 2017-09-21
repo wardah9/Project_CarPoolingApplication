@@ -2,83 +2,156 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="left|center"
     android:background="@drawable/back2"
+    android:gravity="left|center"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ScrollView
         android:layout_margin="20dp"
-        android:padding="5dp"
-        android:background="#302f4b4b"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/user_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter name" />
-
-        <EditText
-            android:id="@+id/user_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="example@gmail.com" />
-
-        <EditText
-            android:id="@+id/user_phone"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="+968 " />
-
-        <EditText
-            android:id="@+id/user_nationality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Oman"
-            android:hint="Oman" />
-
-        <EditText
-            android:id="@+id/user_pass"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Passwod" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp">
+            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#302f4b4b"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/user_name"
+                    android:drawableRight="@drawable/user_icon"
+                    android:drawablePadding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Enter name"
+                    android:padding="8dp" />
+
+                <EditText
+                    android:id="@+id/user_email"
+                    android:layout_width="match_parent"
+                    android:drawableRight="@drawable/email_icon"
+                    android:drawablePadding="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/white"
+                    android:hint="example@gmail.com"
+                    android:padding="8dp" />
+
+                <EditText
+                    android:id="@+id/user_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableRight="@drawable/phone_icon"
+                    android:drawablePadding="8dp"
+                    android:background="@android:color/white"
+                    android:hint="+968 "
+                    android:inputType="number"
+                    android:padding="8dp" />
+
+                <EditText
+                    android:id="@+id/user_nationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableRight="@drawable/nationality_icon"
+                    android:drawablePadding="8dp"
+                    android:background="@android:color/white"
+                    android:hint="Oman"
+                    android:padding="8dp"
+                    android:text="Oman" />
+
+                <EditText
+                    android:id="@+id/user_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableRight="@drawable/password_icon"
+                    android:drawablePadding="8dp"
+                    android:background="@android:color/white"
+                    android:hint="Passwod"
+                    android:inputType="textPassword"
+                    android:padding="8dp" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/progressBar"
+                        android:theme="@style/LinearProgress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:maxHeight="20dp"
+                        android:minHeight="20dp"
+                        android:progress="0"
+                        android:secondaryProgress="100"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:drawableRight="@drawable/gender_icon"
+                        android:drawablePadding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender :" />
+
+                    <Spinner
+                        android:id="@+id/user_gender"
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/user_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableRight="@drawable/age_icon"
+                    android:drawablePadding="8dp"
+                    android:background="@android:color/white"
+                    android:hint="Enter Age"
+                    android:inputType="number"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/register_user"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gender :" />
-
-            <Spinner
-                android:id="@+id/user_gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_marginLeft="20dp"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:theme="@style/MyButton" />
         </LinearLayout>
+    </ScrollView>
 
-        <EditText
-            android:id="@+id/user_age"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Age" />
-
-    </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/register_user"
-        android:text="Register"
-        android:textSize="20dp"
-        android:theme="@style/MyButton"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:textAllCaps="false" />
 </LinearLayout>

@@ -37,13 +37,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void CreateNewAccount(View view) {
-        startActivity(new Intent(this , RegistrationActivity.class));
+        startActivity(new Intent(this , user_registration.class));
     }
 
     public void ForgetPassword(View view) {
     }
 
     public void OnClickSignIn(View view) {
+
+        if (pass_edt.getText().length() > 0 && email_edt.getText().length() > 0 ){
+
+            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 
         mAuth.signInWithEmailAndPassword(email_edt.getText().toString(), pass_edt.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -63,6 +67,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }else
+
+            Toast.makeText(this, "Email and Password should not be empty", Toast.LENGTH_SHORT).show();
+
+
     }
 
     private void getUID() {

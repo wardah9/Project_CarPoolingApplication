@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/back2"
     tools:context="carpoolingapplication.carpooling.com.ForgetPassActivity">
 
     <EditText
         android:padding="8dp"
         android:layout_margin="30dp"
-        android:background="#1e233e59"
         android:hint="example@abc.com"
         android:id="@+id/forget_email"
         android:drawableRight="@android:drawable/ic_dialog_email"

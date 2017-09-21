@@ -1,19 +1,18 @@
 <resources>
     <string name="app_name">CarPooling</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_maps2">Map2</string>
 
 
-    <string name="tab_1">Label 1</string>
-    <string name="tab_2">Label 2</string>
-    <string name="tab_3">Label 3</string>
-    <string name="tab_4">Label 4</string>
-    <string name="tab_5">Label 5</string>
     <string name="title_activity_barcode_scanner">BarcodeScannerActivity</string>
+    <string name="title_activity_user_registration">user_registration</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_search_map">Map</string>
 
 </resources>

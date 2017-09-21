@@ -27,6 +27,7 @@ import carpoolingapplication.carpooling.com.fragment.SettingFragment;
 import carpoolingapplication.carpooling.com.fragment.SharingFragment;
 import carpoolingapplication.carpooling.com.fragment.UserAccountFragment;
 //import io.codetail.animation.ViewAnimationUtils;
+import carpoolingapplication.carpooling.com.model.UserData;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
@@ -47,7 +48,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         setContentView(R.layout.activity_home);
 
         ContentFragment contentFragment = ContentFragment.newInstance(R.drawable.home_project);   //content_music
-        getSupportFragmentManager().beginTransaction()
+        getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, contentFragment)
                 .commit();
 
@@ -179,7 +180,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
         ContentFragment contentFragment = ContentFragment.newInstance(this.res);
-        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
+        getFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         return contentFragment;
 
     }
@@ -193,21 +194,21 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
              //  return screenShotable;
             case ContentFragment.SERVICES:
                 ServicesFragment Services_Frag = new ServicesFragment();
-                getSupportFragmentManager().beginTransaction()
+                getFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, Services_Frag)
                         .addToBackStack("ServicesFragment")
                         .commit();
                 return screenShotable;
             case ContentFragment.HISTORY:
                 HistoryFragment History_Frag = new HistoryFragment();
-                getSupportFragmentManager().beginTransaction()
+                getFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, History_Frag)
                         .addToBackStack("HistoryFragment")
                         .commit();
                 return screenShotable;
             case ContentFragment.MY_ACCOUNT:
                 UserAccountFragment Account_Frag = new UserAccountFragment();
-                getSupportFragmentManager().beginTransaction()
+                getFragmentManager().beginTransaction()
                         .replace(R.id.content_frame, Account_Frag)
                         .addToBackStack("AccountFragment")
                         .commit();
@@ -248,7 +249,6 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     @Override
     public void disableHomeButton() {
         getSupportActionBar().setHomeButtonEnabled(false);
-
     }
 
     @Override

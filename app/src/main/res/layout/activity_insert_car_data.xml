@@ -66,7 +66,7 @@
             android:id="@+id/user_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Car OwnerShip ID"
+            android:hint="Car OwnerShip ID"
             android:inputType="number" />
 
         <LinearLayout
@@ -86,12 +86,22 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/insert_img"
             android:layout_marginTop="20dp"
             android:text="insert Car image"
             android:theme="@style/MyButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+
+        <carpoolingapplication.carpooling.com.classes.RoundedImageView
+            android:id="@+id/img_car"
+            android:layout_width="100dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_height="100dp"
+            android:scaleType="fitXY" />
 
     </LinearLayout>
 

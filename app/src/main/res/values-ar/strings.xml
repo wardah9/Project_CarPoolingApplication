@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarPooling</string>
+
+    <string name="hello_blank_fragment">مرحبا صفحه فاضيه</string>
+    <string name="drawer_open">فتح</string>
+    <string name="drawer_close">غلق</string>
+    <string name="title_activity_maps">خريطه</string>
+
+
+    <string name="title_activity_barcode_scanner">مسح الباركود</string>
+    <string name="title_activity_user_registration">تسجيل المستخدم</string>
+    <string name="title_home">البيت</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">الاشعارات</string>
+    <string name="title_activity_search_map">خريطه</string>
+
+
+
+</resources>

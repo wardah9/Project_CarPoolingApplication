@@ -19,9 +19,6 @@ import carpoolingapplication.carpooling.com.map.MapsActivity;
 public class SharingFragment extends Fragment {
 
 
-    private Button shareGoogle;
-    private Button shareFacebook;
-
     public SharingFragment() {
         // Required empty public constructor
     }
@@ -32,30 +29,6 @@ public class SharingFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.fragment_sharing, container, false);
-        shareGoogle = (Button) rootView.findViewById(R.id.googleID);
-        shareFacebook = (Button) rootView.findViewById(R.id.facebookID);
-
-
-        shareGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://plus.google.com")));
-            }
-        });
-
-
-
-        shareFacebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com")));
-            }
-        });
-
         return rootView;
-
-
     }
-
 }
