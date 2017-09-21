@@ -22,18 +22,19 @@ android:layout_height="match_parent">
         android:text="Share my Car"
         android:id="@+id/share_my_Car"
         android:theme="@style/Button"
+        android:textAllCaps="false"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:layout_marginTop="80dp"
-        android:text="find a Car"
+        android:text="Find a Car"
         android:id="@+id/find_Car"
+        android:theme="@style/Button"
+        android:textAllCaps="false"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
 </FrameLayout>
 </io.codetail.widget.RevealFrameLayout>

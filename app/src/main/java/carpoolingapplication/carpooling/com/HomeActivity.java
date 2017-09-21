@@ -71,32 +71,23 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         SlideMenuItem menuItem0 = new SlideMenuItem(ContentFragment.CLOSE, R.drawable.icn_close);
         list.add(menuItem0);
 
-        SlideMenuItem menuItem = new SlideMenuItem(ContentFragment.SERVICES, R.drawable.icn_1);
-        list.add(menuItem);
+        SlideMenuItem menuItem1 = new SlideMenuItem(ContentFragment.SERVICES, R.drawable.icn_1);
+        list.add(menuItem1);
 
-//        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.SHARE_MY_CAR,R.drawable.care_sharing);
-//        list.add(menuItem2);
-//
-//        SlideMenuItem menuItem3 = new SlideMenuItem(ContentFragment.FIND_A_CAR, R.drawable.ic_search);
-//        list.add(menuItem3);
+        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.HISTORY, R.drawable.history_icon);
+        list.add(menuItem2);
 
-        SlideMenuItem menuItem4 = new SlideMenuItem(ContentFragment.HISTORY, R.drawable.history_icon);
+        SlideMenuItem menuItem3 = new SlideMenuItem(ContentFragment.MY_ACCOUNT, R.drawable.user_identity);
+        list.add(menuItem3);
+
+        SlideMenuItem menuItem4 = new SlideMenuItem(ContentFragment.SETTINGS, R.drawable.ic_menu_manage);
         list.add(menuItem4);
 
-        SlideMenuItem menuItem5 = new SlideMenuItem(ContentFragment.MY_ACCOUNT, R.drawable.user_identity);
+        SlideMenuItem menuItem5 = new SlideMenuItem(ContentFragment.SHARING, R.drawable.ic_menu_share);
         list.add(menuItem5);
 
-//        SlideMenuItem menuItem6 = new SlideMenuItem(ContentFragment.COMMUNICATE, R.drawable.ic_communication);
-//        list.add(menuItem6);
-
-        SlideMenuItem menuItem7 = new SlideMenuItem(ContentFragment.SETTINGS, R.drawable.ic_menu_manage);
-        list.add(menuItem7);
-
-        SlideMenuItem menuItem8 = new SlideMenuItem(ContentFragment.SHARING, R.drawable.ic_menu_share);
-        list.add(menuItem8);
-
-        SlideMenuItem menuItem9 = new SlideMenuItem(ContentFragment.ABOUT, R.drawable.information_icon);
-        list.add(menuItem9);
+        SlideMenuItem menuItem6 = new SlideMenuItem(ContentFragment.ABOUT, R.drawable.information_icon);
+        list.add(menuItem6);
 
     }
 
@@ -148,7 +139,6 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         drawerToggle.onConfigurationChanged(newConfig);
     }
 
-
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -176,22 +166,19 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         Animator animator = ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
         animator.setInterpolator(new AccelerateInterpolator());
         animator.setDuration(ViewAnimator.CIRCULAR_REVEAL_ANIMATION_DURATION);
-
         findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
         ContentFragment contentFragment = ContentFragment.newInstance(this.res);
         getFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         return contentFragment;
-
     }
 
     @Override
     public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position) {
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-               // finishActivity(1);
                  finish();
-             //  return screenShotable;
+
             case ContentFragment.SERVICES:
                 ServicesFragment Services_Frag = new ServicesFragment();
                 getFragmentManager().beginTransaction()
@@ -213,13 +200,6 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
                         .addToBackStack("AccountFragment")
                         .commit();
                 return screenShotable;
-//            case ContentFragment.COMMUNICATE:
-//                ComunicationFragment Comunication_Frag = new ComunicationFragment();
-//                getSupportFragmentManager().beginTransaction()
-//                        .replace(R.id.content_frame, Comunication_Frag)
-//                        .addToBackStack("ComunicationFragment")
-//                        .commit();
-//                return screenShotable;
             case ContentFragment.SETTINGS:
                 SettingFragment Setting_Frag = new SettingFragment();
                 getSupportFragmentManager().beginTransaction()
@@ -255,7 +235,6 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     public void enableHomeButton() {
         getSupportActionBar().setHomeButtonEnabled(true);
         drawerLayout.closeDrawers();
-
     }
 
     @Override

@@ -10,8 +10,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
-
-import carpoolingapplication.carpooling.com.fragment.HistoryFragment;
 import carpoolingapplication.carpooling.com.fragment.InsertDataFragment;
 import carpoolingapplication.carpooling.com.fragment.RideOfferFragment;
 
@@ -19,8 +17,7 @@ public class user_registration extends AppCompatActivity {
 
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -29,7 +26,8 @@ public class user_registration extends AppCompatActivity {
                      setFragment(new InsertDataFragment());
                     return true;
                 case R.id.navigation_dashboard:
-                    setFragment(new RideOfferFragment());
+                    //setFragment(new RideOfferFragment());
+                    startActivity(new Intent(user_registration.this,InsertCarData.class));
                     return true;
                 case R.id.navigation_notifications:
                     startActivity(new Intent(user_registration.this,BarcodeScanner.class));

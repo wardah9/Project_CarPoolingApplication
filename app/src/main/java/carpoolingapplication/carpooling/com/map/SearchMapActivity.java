@@ -44,8 +44,6 @@ public class SearchMapActivity extends FragmentActivity implements OnMapReadyCal
         mMap.addMarker(new MarkerOptions().position(m5).title("Marker"));
 
 
-
-
         mMap.moveCamera(CameraUpdateFactory.newLatLng(m2));
     }
 }

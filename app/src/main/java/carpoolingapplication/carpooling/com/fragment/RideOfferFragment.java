@@ -73,11 +73,8 @@ public class RideOfferFragment extends Fragment {
                         new DatePickerDialog.OnDateSetListener() {
 
                             @Override
-                            public void onDateSet(DatePicker view, int year,
-                                                  int monthOfYear, int dayOfMonth) {
-
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                                 dateText.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
-
                             }
                         }, mYear, mMonth, mDay);
                 datePickerDialog.show();

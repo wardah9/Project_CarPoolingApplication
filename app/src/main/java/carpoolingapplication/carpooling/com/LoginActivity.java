@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void ForgetPassword(View view) {
+        startActivity(new Intent(this , ForgetPassActivity.class));
     }
 
     public void OnClickSignIn(View view) {

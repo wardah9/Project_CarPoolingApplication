@@ -21,9 +21,7 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 public class HistoryFragment extends Fragment {
 
     String titels[]={"Trip Nmae","Express Way","Public Road"};
-    String des[]={"from Muscat to Omantel",
-            "from Matrah to Muscat",
-            "from Muscat to Matrah"};
+    String des[]={"from Muscat to Omantel", "from Matrah to Muscat", "from Muscat to Matrah"};
 
 
     public HistoryFragment() {

@@ -23,18 +23,8 @@ import yalantis.com.sidemenu.interfaces.ScreenShotable;
 public class ContentFragment extends Fragment implements ScreenShotable {
     public static final String CLOSE = "Close";
     public static final String SERVICES = "Services";
-//    public static final String BUILDING = "Building";
-//    public static final String BOOK = "Book";
-//    public static final String PAINT = "Paint";
-//    public static final String CASE = "Case";
-//    public static final String SHOP = "Shop";
-//    public static final String PARTY = "Party";
-//    public static final String MOVIE = "Movie";
-//    public static final String SHARE_MY_CAR = "Share my Car";
-//    public static final String FIND_A_CAR = "Find a Ride";
     public static final String HISTORY = "History";
     public static final String MY_ACCOUNT = "My Account";
-//    public static final String COMMUNICATE = "Communicate";
     public static final String SETTINGS = "Settings";
     public static final String SHARING = "Sharing";
     public static final String ABOUT = "About";

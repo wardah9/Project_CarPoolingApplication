@@ -24,6 +24,7 @@ public class SettingFragment extends Fragment {
 
     Locale myLocal;
     String names[]={"English","Arabic"};
+
     public SettingFragment() {
         // Required empty public constructor
     }

@@ -26,6 +26,7 @@ public class ForgetPassActivity extends AppCompatActivity {
     }
 
     public void OnUserForgetPassword(View view) {
+
         mAuth.sendPasswordResetEmail(forget_email.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

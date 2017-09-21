@@ -15,7 +15,6 @@ import carpoolingapplication.carpooling.com.R;
  */
 public class AboutAppFragment extends Fragment {
 
-
     public AboutAppFragment() {
         // Required empty public constructor
     }

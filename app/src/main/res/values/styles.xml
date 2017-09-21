@@ -14,10 +14,10 @@
 
     <style name="Button" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">@android:color/white</item>
-        <item name="colorButtonNormal">#cc62b3a0</item>
+        <item name="colorButtonNormal">#1c929f</item>
         <item name="borderlessButtonStyle" width="9dp">@android:color/white</item>
     </style>
-
+    <!--#cc62b3a0-->
     <style name="MyButton" parent="Theme.AppCompat.Light">
         <item name="colorControlHighlight">#05696b</item>
         <item name="colorButtonNormal">#b082bdc4</item>

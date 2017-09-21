@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/about_container"
     android:background="@drawable/back2"
     android:gravity="center">
 
@@ -42,7 +43,7 @@
         android:textColor="#0325e9"
         android:background="@drawable/my_border"
         android:padding="10dp"
-        android:text="Nura Said Al-Saifi \n IT Technician \n noormoon88@gmail.com"/>
+        android:text="Nura Said Al-Saifi \n Job Seeker \n noormoon88@gmail.com"/>
 
     <TextView
         android:layout_width="wrap_content"
